@@ -1,5 +1,5 @@
-# Topic_Extraction
-Topic extraction using python Scikit-learn....
+# Keyword Extraction
+Keyword extraction using python Scikit-learn....
 
 Stackoverflow dataset is used for this working example..
 https://raw.githubusercontent.com/kavgan/nlp-text-mining-working-examples/master/tf-idf/data/stackoverflow-data-idf.json
