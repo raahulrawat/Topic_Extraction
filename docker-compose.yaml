@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  bot:
+    image: "raahulraawat/gsh:991.1.1"
+    container_name: codd
+    ports: 
+      - 8080:8003
+    environment:
+      - model_path=/nlu/models/
+      - model_config=/home/rahul/Documents/rasa-engine/data/configs_for_docs/supervised_embeddings_config.yml
+      - training_data=/home/rahul/Documents/rasa-engine/data/examples/rasa/demo-rasa.json
+      - model_name=college
+      - mongo_database=mongodb://65.1.208.242:9009/
+      - database_name=bot
+      - stories=/src/rasa/dialogue_service
+      - cache=3
+      - bucket_name=sanskar
+      - logpath=/logs/
+      - IS_TERMINAL=True
+      - MinIO=65.1.208.242:9001
+      - Min_access=minioadmin
+      - Min_secret=minioadmin
+      - default_model_percentage=0.98
+      - agent_model_percentage=0.94
+    # build: .
